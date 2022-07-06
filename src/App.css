@@ -3,10 +3,6 @@
   animation: 2s ease-out slideInFromLeft;
 }
 
-#main {
-  
-}
-
 #text-welcome {
   color: #ee9ca7;
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
@@ -66,4 +62,39 @@
   100%{
     opacity: 1;
   }
+}
+
+/* Sidebar */
+
+#sidebar {
+  font-family: 'Poppins', sans-serif;
+  background-color: azure;
+  transition: var(--tran-04);
+  z-index: 100;
+}
+
+#arrow_button {
+  background-color: #ee9ca7;
+}
+
+.close {
+  width: 78px;
+  transition: var(--tran-04);
+}
+
+.close #text {
+  opacity: 0;
+}
+
+#section {
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  left: 256px;
+  width: calc(100% - 256px);
+  transition: var(--tran-04);
+}
+
+#sidebar.close ~ #section {
+  left: 78px;
+  width: calc(100% - 78px);
 }
