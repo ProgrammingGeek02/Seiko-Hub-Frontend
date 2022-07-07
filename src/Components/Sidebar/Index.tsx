@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Outlet, Link } from 'react-router-dom';
+import { Navbar } from '..';
 const Index = () => {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,7 @@ const Index = () => {
 
   return (
     <div className='w-full'>
-      <div className={`fixed top-0 left-0 h-full px-2 py-3 shadow-2xl ${isOpen ? 'close' : 'w-64'}`} id='sidebar'>
+      <div className={`bg-gray-50 fixed top-0 left-0 h-full px-2 py-3 shadow-2xl w-64 ${isOpen ? 'Open' : 'Closed'}`} id='sidebar'>
         <div className='relative mb-6' id='header'>
 
           <div className='flex'>
@@ -32,7 +33,7 @@ const Index = () => {
           </div>
 
           <i
-            className='text-base text-center bx bx-right-arrow-alt absolute top-2/4 -right-6 -translate-y-2/4 w-6 h-6 text-white rounded-xl'
+            className='bx bx-menu text-base text-center absolute top-2/4 right-1 -translate-y-2/4 w-6 h-6 text-white rounded-xl cursor-pointer'
             id='arrow_button'
             onClick={toggle}
           ></i>
@@ -118,7 +119,8 @@ const Index = () => {
         
       </div>
 
-      <div className='h-screen' id='section'>
+      <div className='h-screen bg-gray-50' id='section'>
+        <Navbar toggle={toggle} />
         <Outlet />
       </div>
       

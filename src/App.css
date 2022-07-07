@@ -68,8 +68,6 @@
 
 #sidebar {
   font-family: 'Poppins', sans-serif;
-  background-color: azure;
-  transition: var(--tran-04);
   z-index: 100;
 }
 
@@ -77,24 +75,17 @@
   background-color: #ee9ca7;
 }
 
-.close {
-  width: 78px;
-  transition: var(--tran-04);
+.Open {
+  left: 0%;
+  transition: all 0.5s ease;
 }
 
-.close #text {
-  opacity: 0;
+.Closed {
+  left: -100%;
+  transition: all 0.5s ease;
 }
 
 #section {
   font-family: 'Poppins', sans-serif;
   position: relative;
-  left: 256px;
-  width: calc(100% - 256px);
-  transition: var(--tran-04);
-}
-
-#sidebar.close ~ #section {
-  left: 78px;
-  width: calc(100% - 78px);
 }

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { BiArrowBack } from 'react-icons/bi';
 export default function Index() {
 
   const [IsActive, setIsActive] = useState(false);
@@ -63,7 +62,10 @@ const Login = ( { isActive }: any ) => {
   return(
     <div className='w-full max-w-xs mx-auto'>
       <form className='bg-white shadow-2xl overflow-hidden rounded px-8 pt-6 pb-8 mb-4' id='form_login'>
-        <BiArrowBack className='transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110' size={25} onClick={() => isActive(false)} cursor={"pointer"} />
+        <i
+          className='bx bx-left-arrow-alt absolute text-2xl cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110'
+          onClick={() => isActive(false)}
+        ></i>
         <p className='text-center text-3xl font-bold my-5'>Login Form</p>
 
         <div className='mx-4 my-5 '>
